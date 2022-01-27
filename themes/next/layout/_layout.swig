@@ -23,15 +23,20 @@
       <div class="main-inner">
         <div class="content-wrap">
           {% include '_partials/header/sub-menu.swig' %}
+          
           <div class="content {% block class %}{% endblock %}">
             {% block content %}{% endblock %}
+           
           </div>
           {% include '_partials/comments.swig' %}
+          
         </div>
         {%- if theme.sidebar.display !== 'remove' %}
           {% block sidebar %}{% endblock %}
         {%- endif %}
+         
       </div>
+     
     </main>
 
     <footer class="footer">
