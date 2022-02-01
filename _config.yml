@@ -1,16 +1,17 @@
 title: coderS
-subtitle: ''
+subtitle: '记录前端小白的成长经历'
 description: ''
 keywords: null
 author: ziSong
 language: zh-CN
-timezone: ''
-url: http://example.com
-permalink: ':year/:month/:day/:title/'
+timezone: 'Asia/Shanghai'
+url: https://xiaozisong.github.io/
+permalink: ':year-:month-:day-:title.html'
 permalink_defaults: null
 pretty_urls:
   trailing_index: true
   trailing_html: true
+root: /
 source_dir: source
 public_dir: public
 tag_dir: tags
@@ -34,7 +35,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace: ''
   wrap: true
   hljs: false
@@ -60,6 +61,12 @@ include: null
 exclude: null
 ignore: null
 theme: next
+back2top:
+  enable: true
+  # Back to top in sidebar.
+  sidebar: false
+  # Scroll percent label in b2t button.
+  scrollpercent: true
 deploy:
   type: git
   repo: https://github.com/xiaozisong/xiaozisong.github.io

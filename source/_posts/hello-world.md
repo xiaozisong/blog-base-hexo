@@ -1,6 +1,6 @@
 ---
 title: Hello New World ll
-
+comments: true
 ---
 Welcome to my blog
 ## This is my first blog
