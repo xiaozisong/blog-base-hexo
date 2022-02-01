@@ -1,9 +1,10 @@
 ---
 title: Hello New World 
+
 ---
 Welcome to my blog
 ## This is my first blog
-
+<!--more-->
 # 搭建博客时遇到的那些bug
 这是我第一次搭建博客，使用的是hexo框架，并将博客部署到GitHub远端  
 前面的搭建过程很顺利，所以当时的心里想法是，博客搭建也没有这么难啊~~  
