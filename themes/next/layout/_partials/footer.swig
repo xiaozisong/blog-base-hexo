@@ -10,6 +10,7 @@
   </div>
 {%- endif %}
 
+
 <div class="copyright">
   {% set copyright_year = date(null, 'YYYY') %}
   &copy; {% if theme.footer.since and theme.footer.since != copyright_year %}{{ theme.footer.since }} – {% endif %}
@@ -20,7 +21,7 @@
   <span class="author" itemprop="copyrightHolder">{{ theme.footer.copyright or author }}</span>
 
   {%- if config.symbols_count_time.total_symbols %}
-    <span class="post-meta-divider">|</span>
+    <span class="post-meta-divider"></span>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
@@ -31,7 +32,7 @@
   {%- endif %}
 
   {%- if config.symbols_count_time.total_time %}
-    <span class="post-meta-divider">|</span>
+    <span class="post-meta-divider"></span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
@@ -46,6 +47,7 @@
   <div class="addthis_inline_share_toolbox">
     <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ theme.add_this_id }}" async="async"></script>
   </div>
+  
 {%- endif %}
 
 {{- next_inject('footer') }}

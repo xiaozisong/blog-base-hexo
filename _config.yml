@@ -6,7 +6,10 @@ author: ziSong
 language: zh-CN
 timezone: ''
 url: https://xiaozisong.github.io/
-permalink: ':year-:month-:day-:title.html'
+permalink: 'posts/:abbrlink/'
+abbrlink:
+	alg: crc32   #算法： crc16(default) and crc32
+	rep: hex 
 permalink_defaults: null
 pretty_urls:
   trailing_index: true
@@ -71,3 +74,25 @@ deploy:
   type: git
   repo: https://github.com/xiaozisong/xiaozisong.github.io
   branch: master
+plugins: hexo-generate-feed
+search:
+path: search.xml
+field: post
+format: html
+limit: 10000
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  log: false
+  model:
+    use: live2d-widget-model-koharu
+  display:
+    position: right
+    width: 150
+    height: 300
+  mobile:
+    show: true

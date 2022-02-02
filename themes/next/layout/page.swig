@@ -1,9 +1,10 @@
 {% extends '_layout.swig' %}
 {% import '_macro/sidebar.swig' as sidebar_template with context %}
 
+
 {% block title %}
   {%- set page_title_suffix = ' | ' + title %}
-
+  {% include 'tag-color.swig' %}
   {%- if page.type === 'categories' and not page.title %}
     {{- __('title.category') + page_title_suffix }}
   {%- elif page.type === 'tags' and not page.title %}

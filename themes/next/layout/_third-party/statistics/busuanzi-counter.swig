@@ -14,7 +14,7 @@
   {%- endif %}
 
   {%- if theme.busuanzi_count.total_visitors and theme.busuanzi_count.total_views %}
-    <span class="post-meta-divider">|</span>
+    <span class="post-meta-divider"></span>
   {%- endif %}
 
   {%- if theme.busuanzi_count.total_views %}

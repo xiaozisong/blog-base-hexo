@@ -1,13 +1,17 @@
 ---
-title: Hello New World ll
+title: 配置GitHub的Actions功能遇到的那些坑
 comments: true
+copyright: true
+categories: GitHub
+top: 1
+abbrlink: ead6f52e
 ---
-Welcome to my blog
-## This is my first blog
+如果你也在配置GitHub的Actions功能，让自己的代码部署方便，并在配置的过程中遇到一些  
+一些bug，希望这篇文章可以帮到你
 <!--more-->
-# 搭建博客时遇到的那些bug
-这是我第一次搭建博客，使用的是hexo框架，并将博客部署到GitHub远端  
-前面的搭建过程很顺利，所以当时的心里想法是，博客搭建也没有这么难啊~~  
-本想到这里就结束了，但是我看到了GitHub的**自动化部署**功能，仔细阅读过后发现，这个功能能实现直接在远端仓库编辑博客，并且自动部署，想想这个功能都很香啊！  
-但是当我配置好.yml文件，并push到GitHub的blog分支时，我看到了那个小黄点~我原以为就这么顺顺利利一切绿灯通过，但是意外发生了，黄点变成了×，我赶紧点进去查看action的报错信息，提示我在子模块中找不到我目录下的一个子文件夹，当时的想法是我的.yml文件配置错误，搞了一天，头都大了，实在是不想重来，当天也因为时间问题，暂时搁置了。  
-第二天，早起过后，突然发现我的blog分支的目录解构错误，赶紧删除blog文件夹，与远程仓库，重新部署，最后运行.yml文件时，心里忐忑不安，还好最后通过了，所以记录一下。
+# 配置actions时遇到的那些bug
+我使用的是大牛jamesives的.yml配置文件，链接会放在博文的最后
+1.  463 Error: fatal: No url found for submodule path '.deploy_git' in .gitmodules464 Error: The process "/usr/bin/git' failed with exit code 128
+导致这个错误的原因是，你在新建分支时，最后打包提交的产物不在你的new branch上，而是在你的master分支上，导致目录结构错误，提示找不到 No url found 'xxx' 在子模块中，所以在你上传打包时，一定仔细检查好你的目录结构
+2.  Process completed with exit code 1. 进程完成，错误代码 1.这个bug暂时为解决，仔细观察了一下错误提示信息，是npm是找不到资源报的错，当时以为是.yml文件迭代了,上网又copy了最新的内容,最后运行还是出错,目前暂未解决···
+3.  最后，如果你也是要自动化部署你的博客文章与内容，那么https://www.npmjs.com/package/@jamesives/github-pages-deploy-action是你最好的选择。

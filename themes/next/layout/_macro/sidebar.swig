@@ -22,7 +22,7 @@
           {{ __('sidebar.overview') }}
         </li>
       </ul>
-
+      
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
         {%- if display_toc %}
@@ -30,6 +30,7 @@
         {%- endif %}
       </div>
       <!--/noindex-->
+
 
       <div class="site-overview-wrap sidebar-panel">
         {{ partial('_partials/sidebar/site-overview.swig', {}, {cache: theme.cache.enable}) }}
@@ -43,7 +44,7 @@
           <span>0%</span>
         </div>
       {%- endif %}
-
+    
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>
