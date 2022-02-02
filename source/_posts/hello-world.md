@@ -2,7 +2,7 @@
 title: 配置GitHub的Actions功能遇到的那些坑
 comments: true
 copyright: true
-categories: GitHub
+tags: GitHub
 top: 1
 abbrlink: ead6f52e
 ---
