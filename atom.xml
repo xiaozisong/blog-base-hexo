@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>coderS</title>
+  
+  <subtitle>记录前端小白的成长经历</subtitle>
+  <link href="https://xiaozisong.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://xiaozisong.github.io/"/>
+  <updated>2022-02-01T14:23:53.733Z</updated>
+  <id>https://xiaozisong.github.io/</id>
+  
+  <author>
+    <name>ziSong</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>blog</title>
+    <link href="https://xiaozisong.github.io/2022-01-27-blog-1.html"/>
+    <id>https://xiaozisong.github.io/2022-01-27-blog-1.html</id>
+    <published>2022-01-27T06:47:28.000Z</published>
+    <updated>2022-02-01T14:23:53.733Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="three"><a href="#three" class="headerlink" title="three"></a>three</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;three&quot;&gt;&lt;a href=&quot;#three&quot; class=&quot;headerlink&quot; title=&quot;three&quot;&gt;&lt;/a&gt;three&lt;/h3&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>blog</title>
+    <link href="https://xiaozisong.github.io/2022-01-27-blog.html"/>
+    <id>https://xiaozisong.github.io/2022-01-27-blog.html</id>
+    <published>2022-01-27T06:24:33.000Z</published>
+    <updated>2022-02-01T14:23:53.734Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="this-is-my-second-blog"><a href="#this-is-my-second-blog" class="headerlink" title="this is my second blog"></a>this is my second blog</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;this-is-my-second-blog&quot;&gt;&lt;a href=&quot;#this-is-my-second-blog&quot; class=&quot;headerlink&quot; title=&quot;this is my second blog&quot;&gt;&lt;/a&gt;this is my second bl</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello New World ll</title>
+    <link href="https://xiaozisong.github.io/2022-01-27-hello-world.html"/>
+    <id>https://xiaozisong.github.io/2022-01-27-hello-world.html</id>
+    <published>2022-01-27T03:03:20.197Z</published>
+    <updated>2022-02-01T15:11:01.585Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to my blog</p><h2 id="This-is-my-first-blog"><a href="#This-is-my-first-blog" class="headerlink" title="This is my first blog"></a>This is my first blog</h2><span id="more"></span><h1 id="搭建博客时遇到的那些bug"><a href="#搭建博客时遇到的那些bug" class="headerlink" title="搭建博客时遇到的那些bug"></a>搭建博客时遇到的那些bug</h1><p>这是我第一次搭建博客，使用的是hexo框架，并将博客部署到GitHub远端<br>前面的搭建过程很顺利，所以当时的心里想法是，博客搭建也没有这么难啊~~<br>本想到这里就结束了，但是我看到了GitHub的<strong>自动化部署</strong>功能，仔细阅读过后发现，这个功能能实现直接在远端仓库编辑博客，并且自动部署，想想这个功能都很香啊！<br>但是当我配置好.yml文件，并push到GitHub的blog分支时，我看到了那个小黄点~我原以为就这么顺顺利利一切绿灯通过，但是意外发生了，黄点变成了×，我赶紧点进去查看action的报错信息，提示我在子模块中找不到我目录下的一个子文件夹，当时的想法是我的.yml文件配置错误，搞了一天，头都大了，实在是不想重来，当天也因为时间问题，暂时搁置了。<br>第二天，早起过后，突然发现我的blog分支的目录解构错误，赶紧删除blog文件夹，与远程仓库，重新部署，最后运行.yml文件时，心里忐忑不安，还好最后通过了，所以记录一下。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Welcome to my blog&lt;/p&gt;
+&lt;h2 id=&quot;This-is-my-first-blog&quot;&gt;&lt;a href=&quot;#This-is-my-first-blog&quot; class=&quot;headerlink&quot; title=&quot;This is my first blog&quot;&gt;&lt;/a&gt;This is my first blog&lt;/h2&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+</feed>
