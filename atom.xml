@@ -6,7 +6,7 @@
   <link href="https://xiaozisong.github.io/atom.xml" rel="self"/>
   
   <link href="https://xiaozisong.github.io/"/>
-  <updated>2022-02-02T12:49:14.329Z</updated>
+  <updated>2022-02-02T14:18:01.918Z</updated>
   <id>https://xiaozisong.github.io/</id>
   
   <author>
@@ -15,46 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>blog</title>
-    <link href="https://xiaozisong.github.io/posts/c0155143/"/>
-    <id>https://xiaozisong.github.io/posts/c0155143/</id>
-    <published>2022-01-27T06:47:28.000Z</published>
-    <updated>2022-02-02T12:49:14.329Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="three"><a href="#three" class="headerlink" title="three"></a>three</h3>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;three&quot;&gt;&lt;a href=&quot;#three&quot; class=&quot;headerlink&quot; title=&quot;three&quot;&gt;&lt;/a&gt;three&lt;/h3&gt;</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>blog</title>
-    <link href="https://xiaozisong.github.io/posts/c0155143/"/>
-    <id>https://xiaozisong.github.io/posts/c0155143/</id>
-    <published>2022-01-27T06:24:33.000Z</published>
-    <updated>2022-02-02T12:49:07.510Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="this-is-my-second-blog"><a href="#this-is-my-second-blog" class="headerlink" title="this is my second blog"></a>this is my second blog</h3>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;this-is-my-second-blog&quot;&gt;&lt;a href=&quot;#this-is-my-second-blog&quot; class=&quot;headerlink&quot; title=&quot;this is my second blog&quot;&gt;&lt;/a&gt;this is my second bl</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>配置GitHub的Actions功能遇到的那些坑</title>

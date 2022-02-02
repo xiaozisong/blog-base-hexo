@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>blog</title>
-    <url>/posts/c0155143/</url>
-    <content><![CDATA[<h3 id="three"><a href="#three" class="headerlink" title="three"></a>three</h3>]]></content>
-  </entry>
-  <entry>
-    <title>blog</title>
-    <url>/posts/c0155143/</url>
-    <content><![CDATA[<h3 id="this-is-my-second-blog"><a href="#this-is-my-second-blog" class="headerlink" title="this is my second blog"></a>this is my second blog</h3>]]></content>
-  </entry>
-  <entry>
     <title>配置GitHub的Actions功能遇到的那些坑</title>
     <url>/posts/ead6f52e/</url>
     <content><![CDATA[<p>如果你也在配置GitHub的Actions功能，让自己的代码部署方便，并在配置的过程中遇到一些<br>一些bug，希望这篇文章可以帮到你</p>
