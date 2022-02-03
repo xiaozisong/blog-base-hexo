@@ -212,11 +212,12 @@
         {{ post.content }}
       {%- endif %}
     </div>
+     <!-- 相关文章推荐 -->
 
     {#####################}
     {### END POST BODY ###}
     {#####################}
-    <div>
+    {#<div>
       {% if not is_index %}
         {% include 'my-copyright.swig' %}
       {% endif %}
@@ -225,7 +226,7 @@
       {% if not is_index %}
         {% include 'passage-end-tag.swig' %}
       {% endif %}
-    </div>
+    </div>#}
     
     {%- if theme.related_posts.enable and (theme.related_posts.display_in_home or not is_index) %}
       {{ partial('_partials/post/post-related.swig') }}
@@ -240,10 +241,6 @@
 
       {%- if theme.creative_commons.license and theme.creative_commons.post %}
         {{ partial('_partials/post/post-copyright.swig') }}
-      {%- endif %}
-
-      {%- if theme.follow_me %}
-        {{ partial('_partials/post/post-followme.swig', {}, {cache: theme.cache.enable}) }}
       {%- endif %}
 
       <footer class="post-footer">

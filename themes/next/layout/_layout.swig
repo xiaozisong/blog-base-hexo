@@ -10,6 +10,8 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
+<link rel="stylesheet" href="/dist/css/share.min.css">
+<script src="/dist/js/social-share.min.js"></script>
   <div class="container{%- if theme.motion.enable %} use-motion{%- endif %}">
     <div class="headband"></div>
 
@@ -25,7 +27,8 @@
           {% include '_partials/header/sub-menu.swig' %}
           
           <div class="content {% block class %}{% endblock %}">
-            {% block content %}{% endblock %}
+            {% block content %}
+            {% endblock %}
            
           </div>
           {% include '_partials/comments.swig' %}
@@ -34,7 +37,7 @@
         {%- if theme.sidebar.display !== 'remove' %}
           {% block sidebar %}{% endblock %}
         {%- endif %}
-         
+        
       </div>
      
     </main>
@@ -60,6 +63,9 @@
   {{- next_inject('bodyEnd') }}
   {%- if theme.pjax %}
     </div>
+
   {%- endif %}
+  <!--share.js-->
+
 </body>
 </html>

@@ -8,7 +8,9 @@
 {% block content %}
 
   {{ partial('_macro/post.swig', {post: page}) }}
-
+   {% include '_partials/share/sharejs.swig' %}  
+  
+  
 {% endblock %}
 
 

@@ -4,7 +4,7 @@
 
 {% block title %}
   {%- set page_title_suffix = ' | ' + title %}
-  {% include 'tag-color.swig' %}
+  
   {%- if page.type === 'categories' and not page.title %}
     {{- __('title.category') + page_title_suffix }}
   {%- elif page.type === 'tags' and not page.title %}
@@ -45,6 +45,7 @@
               }}
             </div>
           </div>
+          {% include 'tag-color.swig' %}
         {% elif page.type === 'categories' %}
           <div class="category-all-page">
             <div class="category-all-title">

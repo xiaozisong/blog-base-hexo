@@ -59,7 +59,7 @@ footer:
     # Icon name in Font Awesome. See: https://fontawesome.com/icons
     name: fa fa-heart
     # If you want to animate the icon, set it to true.
-    animated: false
+    animated: true
     # Change the color of icon, using Hex Code.
     color: "#ff0000"
 
@@ -103,7 +103,7 @@ creative_commons:
 scheme: Gemini
 
 # Dark Mode
-darkmode: false
+darkmode: true
 
 
 # ---------------------------------------------------------------
@@ -163,11 +163,11 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: #/images/avatar.gif
+  url: /images/avatar.png
   # If true, the avatar will be dispalyed in circle.
-  rounded: false
+  rounded: true
   # If true, the avatar will be rotated with the cursor.
-  rotated: false
+  rotated: true
 
 # Posts / Categories / Tags in sidebar.
 site_state: true
@@ -288,11 +288,11 @@ follow_me:
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
-  enable: false
-  title: # Custom header, leave empty to use the default one
-  display_in_home: false
+  enable: true
+  title: 相关文章
+  display_in_home: true
   params:
-    maxCount: 5
+    maxCount: 10
     #PPMixingRate: 0.0
     #isDate: false
     #isImage: false
@@ -396,8 +396,8 @@ bookmark:
 
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
-  enable: false
-  permalink: https://github.com/yourname
+  enable: true
+  permalink: https://github.com/xiaozisong
   title: Follow me on GitHub
 
 
@@ -617,12 +617,12 @@ changyan:
 # Valine
 # For more information: https://valine.js.org, https://github.com/xCss/Valine
 valine:
-  enable: false
-  appid: # Your leancloud application appid
-  appkey: # Your leancloud application appkey
+  enable: true
+  appid: Lk17pglmAmqlx0TNDyagvfn3-gzGzoHsz
+  appkey: TMjoHKvWbN5N4DhmsBgYeren
   notify: false # Mail notifier
   verify: false # Verification code
-  placeholder: Just go go # Comment box placeholder
+  placeholder: 请在此输入您的留言 # Comment box placeholder
   avatar: mm # Gravatar style
   guest_info: nick,mail,link # Custom comment header
   pageSize: 10 # Pagination size
@@ -661,7 +661,7 @@ gitalk:
 # Star rating support to each article.
 # To get your ID visit https://widgetpack.com
 rating:
-  enable: false
+  enable: true
   id:     # <app_id>
   color:  fc6423
 
@@ -1004,7 +1004,20 @@ js: js
 images: images
 passage_end_tag:
   enabled: true
-# 近期文章设置
+# # 近期文章设置
 recent_posts_title: 近期文章
 recent_posts_layout: block
 recent_posts: true
+# Dependencies: https://github.com/tea3/hexo-related-popular-posts
+# related_posts:
+#   enable: true
+#   title: 相关文章
+#   icon: graduation-cap
+#   display_in_home: false
+#   params:
+#     maxCount: 10
+#     #PPMixingRate: 0.0
+#     #isDate: false
+#     #isImage: false
+#     #isExcerpt: false
+share_js: true

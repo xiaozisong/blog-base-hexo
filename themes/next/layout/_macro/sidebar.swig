@@ -44,8 +44,10 @@
           <span>0%</span>
         </div>
       {%- endif %}
-    
+    {% include '../_custom/clock.swig' %}
+    {% include '../_custom/runtime.swig' %}
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>
+  
 {% endmacro %}

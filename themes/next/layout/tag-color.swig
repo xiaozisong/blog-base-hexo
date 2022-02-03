@@ -23,7 +23,7 @@
     margin: 8px 5px 0px 0px;
   }
   .tag-cloud-tags a:before{
-    content: "?";
+    content: "🔖";
   }
 
   .tag-cloud-tags a:hover{
