@@ -6,7 +6,7 @@
   <link href="https://xiaozisong.github.io/atom.xml" rel="self"/>
   
   <link href="https://xiaozisong.github.io/"/>
-  <updated>2022-02-09T15:44:03.634Z</updated>
+  <updated>2022-02-09T15:47:24.013Z</updated>
   <id>https://xiaozisong.github.io/</id>
   
   <author>
@@ -21,15 +21,12 @@
     <link href="https://xiaozisong.github.io/posts/7c2dfdbb/"/>
     <id>https://xiaozisong.github.io/posts/7c2dfdbb/</id>
     <published>2022-02-09T15:21:27.000Z</published>
-    <updated>2022-02-09T15:44:03.634Z</updated>
+    <updated>2022-02-09T15:47:24.013Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="ES6中的新增特性-gt-class与class的继承"><a href="#ES6中的新增特性-gt-class与class的继承" class="headerlink" title="ES6中的新增特性 ==&gt; class与class的继承"></a>ES6中的新增特性 ==&gt; class与class的继承</h1><ol><li>在ES6中新增的class与class继承，class类就是构造函数的一个抽象，class的继承，底层也还是寄生组合式继承，只不过是封装成了一个使用更为渐变的语法糖。</li><li>那么如何创建一个类？<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="symbol">Person</span> &#123;</span><br><span class="line">  <span class="comment">// 恭喜，你成功创建了一个类，类名为Person</span></span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure></li><li>那如何在类中定义方法呢？我们之前在ES5中，为了定义属性，会在构造函数中定义，方法会在构造函数的原型对象上定义，这样会让构造函数的所有实例都能访问和调用原型上的方法，以便节省内存。那么，在ES6的class中，定义类只需要写在constructor构造方法中即可。比如<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(name, age)&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name</span><br><span class="line">    <span class="keyword">this</span>.age = age</span><br><span class="line">    <span class="comment">//本质与ES5中的定义属性方式差距并不是很大</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li>比较重要的就是继承了，这里面的讲究非常多，比如子类在继承父类时，有自己想要定义的属性，那么就要在子类的constructor中优先调用super()，而且，super()方法一定要优先于this，具体为什么呢？因为ES6与ES5的继承机制不同，ES5是实例在前，继承在后，而ES6则恰恰相反，<a href="https://es6.ruanyifeng.com/#docs/class-extends">这就是为什么ES6中为什么必须调用super()方法，因为这一步会生成一个继承父类的this对象，没有这一步就无法继承父类.</a>—–《ES6入门》阮一峰著</li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="ES6中的新增特性-gt-class与class的继承"><a href="#ES6中的新增特性-gt-class与class的继承" class="headerlink" title="ES6中的新增特性 ==&gt; class与class的继承"></a>ES6中的新增特性 ==&gt; class与class的继承</h1><span id="more"></span><ol><li>在ES6中新增的class与class继承，class类就是构造函数的一个抽象，class的继承，底层也还是寄生组合式继承，只不过是封装成了一个使用更为渐变的语法糖。</li><li>那么如何创建一个类？<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="symbol">Person</span> &#123;</span><br><span class="line">  <span class="comment">// 恭喜，你成功创建了一个类，类名为Person</span></span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure></li><li>那如何在类中定义方法呢？我们之前在ES5中，为了定义属性，会在构造函数中定义，方法会在构造函数的原型对象上定义，这样会让构造函数的所有实例都能访问和调用原型上的方法，以便节省内存。那么，在ES6的class中，定义类只需要写在constructor构造方法中即可。比如<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(name, age)&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name</span><br><span class="line">    <span class="keyword">this</span>.age = age</span><br><span class="line">    <span class="comment">//本质与ES5中的定义属性方式差距并不是很大</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li>比较重要的就是继承了，这里面的讲究非常多，比如子类在继承父类时，有自己想要定义的属性，那么就要在子类的constructor中优先调用super()，而且，super()方法一定要优先于this，具体为什么呢？因为ES6与ES5的继承机制不同，ES5是实例在前，继承在后，而ES6则恰恰相反，<a href="https://es6.ruanyifeng.com/#docs/class-extends">这就是为什么ES6中为什么必须调用super()方法，因为这一步会生成一个继承父类的this对象，没有这一步就无法继承父类.</a>—–《ES6入门》阮一峰著</li></ol>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;h1 id=&quot;ES6中的新增特性-gt-class与class的继承&quot;&gt;&lt;a href=&quot;#ES6中的新增特性-gt-class与class的继承&quot; class=&quot;headerlink&quot; title=&quot;ES6中的新增特性 ==&amp;gt; class与class的继承&quot;&gt;&lt;/a&gt;E</summary>
-      
+    <summary type="html">&lt;h1 id=&quot;ES6中的新增特性-gt-class与class的继承&quot;&gt;&lt;a href=&quot;#ES6中的新增特性-gt-class与class的继承&quot; class=&quot;headerlink&quot; title=&quot;ES6中的新增特性 ==&amp;gt; class与class的继承&quot;&gt;&lt;/a&gt;ES6中的新增特性 ==&amp;gt; class与class的继承&lt;/h1&gt;</summary>
     
     
     

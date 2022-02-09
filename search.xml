@@ -19,7 +19,8 @@
   <entry>
     <title>ES6中的新特性class类与class继承当中的super方法</title>
     <url>/posts/7c2dfdbb/</url>
-    <content><![CDATA[<h1 id="ES6中的新增特性-gt-class与class的继承"><a href="#ES6中的新增特性-gt-class与class的继承" class="headerlink" title="ES6中的新增特性 ==&gt; class与class的继承"></a>ES6中的新增特性 ==&gt; class与class的继承</h1><ol>
+    <content><![CDATA[<h1 id="ES6中的新增特性-gt-class与class的继承"><a href="#ES6中的新增特性-gt-class与class的继承" class="headerlink" title="ES6中的新增特性 ==&gt; class与class的继承"></a>ES6中的新增特性 ==&gt; class与class的继承</h1><span id="more"></span>
+<ol>
 <li>在ES6中新增的class与class继承，class类就是构造函数的一个抽象，class的继承，底层也还是寄生组合式继承，只不过是封装成了一个使用更为渐变的语法糖。</li>
 <li>那么如何创建一个类？<figure class="highlight angelscript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="symbol">Person</span> &#123;</span><br><span class="line">  <span class="comment">// 恭喜，你成功创建了一个类，类名为Person</span></span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure></li>
 <li>那如何在类中定义方法呢？我们之前在ES5中，为了定义属性，会在构造函数中定义，方法会在构造函数的原型对象上定义，这样会让构造函数的所有实例都能访问和调用原型上的方法，以便节省内存。那么，在ES6的class中，定义类只需要写在constructor构造方法中即可。比如<figure class="highlight kotlin"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(name, age)&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name</span><br><span class="line">    <span class="keyword">this</span>.age = age</span><br><span class="line">    <span class="comment">//本质与ES5中的定义属性方式差距并不是很大</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
