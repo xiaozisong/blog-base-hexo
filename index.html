@@ -137,12 +137,12 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">1</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">2</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">1</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">2</span></a>
 
   </li>
         <li class="menu-item menu-item-commonweal">
@@ -243,7 +243,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-02-03 20:50:55" itemprop="dateModified" datetime="2022-02-03T20:50:55+08:00">2022-02-03</time>
+                <time title="修改时间：2022-02-09 21:00:31" itemprop="dateModified" datetime="2022-02-09T21:00:31+08:00">2022-02-09</time>
               </span>
 
           
@@ -280,6 +280,90 @@
             </div>
           <!--/noindex-->
         
+      
+    </div>
+     <!-- 相关文章推荐 -->
+
+    
+    
+    
+    
+      
+
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xiaozisong.github.io/posts/7c2dfdbb/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ziSong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="coderS">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/7c2dfdbb/" class="post-title-link" itemprop="url">ES6中的新特性class继承当中的super方法</a>
+        </h2>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-02-09 23:21:27 / 修改时间：23:37:26" itemprop="dateCreated datePublished" datetime="2022-02-09T23:21:27+08:00">2022-02-09</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/7c2dfdbb/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/7c2dfdbb/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="ES6中的新增特性-gt-class与class的继承"><a href="#ES6中的新增特性-gt-class与class的继承" class="headerlink" title="ES6中的新增特性 ==&gt; class与class的继承"></a>ES6中的新增特性 ==&gt; class与class的继承</h1><ol>
+<li>在ES6中新增的class与class继承，class类就是构造函数的一个抽象，class的继承，底层也还是寄生组合式继承，只不过是封装成了一个使用更为渐变的语法糖。</li>
+<li>那么如何创建一个类？<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="symbol">Person</span> &#123;</span><br><span class="line">  <span class="comment">// 恭喜，你成功创建了一个类，类名为Person</span></span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure></li>
+<li>那如何在类中定义方法呢？我们之前在ES5中，为了定义属性，会在构造函数中定义，方法会在构造函数的原型对象上定义，这样会让构造函数的所有实例都能访问和调用原型上的方法，以便节省内存。那么，在ES6的class中，定义类只需要写在constructor构造方法中即可。比如<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(name, age)&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name</span><br><span class="line">    <span class="keyword">this</span>.age = age</span><br><span class="line">    <span class="comment">//本质与ES5中的定义属性方式差距并不是很大</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>比较重要的就是继承了，这里面的讲究非常多，比如子类在继承父类时，有自己想要定义的属性，那么就要在子类的constructor中优先调用super()，而且，super()方法一定要优先于this，具体为什么呢？因为ES6与ES5的继承机制不同，ES5是实例在前，继承在后，而ES6则恰恰相反，<a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#docs/class-extends">这就是为什么ES6中为什么必须调用super()方法，因为这一步会生成一个继承父类的this对象，没有这一步就无法继承父类.</a>—–《ES6入门》阮一峰著</li>
+</ol>
+
       
     </div>
      <!-- 相关文章推荐 -->
@@ -370,14 +454,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
