@@ -1,6 +1,10 @@
 ---
 title: ES6中的新特性class类与class继承当中的super方法
-tags: 'JavaScript, ES6, 前端'
+tags: 
+  JavaScript
+  ES6
+  前端
+
 abbrlink: 7c2dfdbb
 date: 2022-02-09 23:21:27
 ---
