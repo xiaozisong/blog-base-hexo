@@ -1,15 +1,14 @@
 ---
 title: ES6中的新特性class类与class继承当中的super方法
-tags: 
-  JavaScript
-  ES6
-  前端
+tags: [JavaScript, ES6, 前端]
+  
 
 abbrlink: 7c2dfdbb
 date: 2022-02-09 23:21:27
 ---
 # ES6中的新增特性 ==> class与class的继承
-1. 在ES6中新增的class与class继承，class类就是构造函数的一个抽象，class的继承，底层也还是寄生组合式继承，只不过是封装成了一个使用更为渐变的语法糖。
+<!-- more -->
+1. 在ES6中新增的class与class继承，class类就是构造函数的一个抽象，class的继承，底层也还是寄生组合式继承，只不过是封装成了一个使用更为简便的语法糖。
 2. 那么如何创建一个类？
 ```
 class Person {
