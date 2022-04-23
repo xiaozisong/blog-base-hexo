@@ -6,7 +6,7 @@
   <link href="https://xiaozisong.github.io/atom.xml" rel="self"/>
   
   <link href="https://xiaozisong.github.io/"/>
-  <updated>2022-04-23T08:49:45.757Z</updated>
+  <updated>2022-04-23T08:51:09.292Z</updated>
   <id>https://xiaozisong.github.io/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>v-if与v-show的性能差距</title>
     <link href="https://xiaozisong.github.io/posts/1e5820a1/"/>
     <id>https://xiaozisong.github.io/posts/1e5820a1/</id>
-    <published>2022-04-23T08:09:51.000Z</published>
-    <updated>2022-04-23T08:49:45.757Z</updated>
+    <published>2022-04-23T16:09:51.000Z</published>
+    <updated>2022-04-23T08:51:09.292Z</updated>
     
     <content type="html"><![CDATA[<h3 id="如果你对v-if与v-show的性能差距上感到疑惑，希望这篇文章可以帮到你"><a href="#如果你对v-if与v-show的性能差距上感到疑惑，希望这篇文章可以帮到你" class="headerlink" title="如果你对v-if与v-show的性能差距上感到疑惑，希望这篇文章可以帮到你"></a>如果你对v-if与v-show的性能差距上感到疑惑，希望这篇文章可以帮到你</h3><span id="more"></span><ol><li>什么是v-if/v-show<ul><li>v-if与v-show都是vue的内置指令，用来控制dom元素的显示与隐藏，v-if是删除与重建dom元素，而v-show则是控制dom元素的display属性，vue官网中也有介绍，不了解的小伙伴可以先去看看官方文档，这里不做过多赘述了。</li></ul></li><li>为什么说v-if比v-show更浪费性能呢？<ul><li>有可能大家刚开始看到这个问题的时候，会想这不是一个答案显而易见的问题吗？因为v-if是删除与重建dom元素，而v-show是控制元素的display属性。删除与重建dom元素肯定比控制样式更浪费性能呀。确实是这样的，那具体的原因是什么呢？</li></ul></li><li>结论<ul><li>因为每一个dom元素都有大量的无用属性，删除与重建dom元素，都会删除与重建dom元素身上的无用属性，造成性能上的浪费。</li><li>Vue中因为虚拟DOM与diff算法的存在，可以高效的更新DOM，而虚拟DOM就是将真实DOM抽象成一个js对象，将真实DOM身上的无用属性去掉。</li><li>v-if的频繁切换，就会造成Vue反复进行创建删除虚拟DOM，如果是子元素还好，要是根节点，Vue会将整个树删除，造成性能上的浪费。</li><li>都不用说渲染层面上的重绘重排，在这里v-if已经输了。</li></ul></li><li>如何选择v-if与v-show<ul><li>v-if是惰性的，如果条件为false，那么一上来Vue是不会帮你创建DOM元素的，而v-show不是</li><li>如果你是频繁需要切换元素的显示与隐藏，推荐v-show。</li></ul></li></ol>]]></content>
     
@@ -42,11 +42,30 @@
   </entry>
   
   <entry>
+    <title>配置GitHub的Actions功能遇到的那些坑</title>
+    <link href="https://xiaozisong.github.io/posts/ead6f52e/"/>
+    <id>https://xiaozisong.github.io/posts/ead6f52e/</id>
+    <published>2022-04-23T08:51:09.292Z</published>
+    <updated>2022-04-23T08:51:09.292Z</updated>
+    
+    <content type="html"><![CDATA[<p>如果你也在配置GitHub的Actions功能，让自己的代码部署方便，并在配置的过程中遇到一些<br>一些bug，希望这篇文章可以帮到你</p><span id="more"></span><h1 id="配置actions时遇到的那些bug"><a href="#配置actions时遇到的那些bug" class="headerlink" title="配置actions时遇到的那些bug"></a>配置actions时遇到的那些bug</h1><p>我使用的是大牛jamesives的.yml配置文件，链接会放在博文的最后</p><ol><li> 463 Error: fatal: No url found for submodule path ‘.deploy_git’ in .gitmodules464 Error: The process “/usr/bin/git’ failed with exit code 128<br>导致这个错误的原因是，你在新建分支时，最后打包提交的产物不在你的new branch上，而是在你的master分支上，导致目录结构错误，提示找不到 No url found ‘xxx’ 在子模块中，所以在你上传打包时，一定仔细检查好你的目录结构</li><li> Process completed with exit code 1. 进程完成，错误代码 1.这个bug暂时未解决，仔细观察了一下错误提示信息，是npm是找不到资源报的错，当时以为是.yml文件迭代了,上网又copy了最新的内容,最后运行还是出错,目前暂未解决···</li><li> 最后，如果你也是要自动化部署你的博客文章与内容，那么<a href="https://www.npmjs.com/package/@jamesives/github-pages-deploy-action">https://www.npmjs.com/package/@jamesives/github-pages-deploy-action</a><br>是你最好的选择。</li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;如果你也在配置GitHub的Actions功能，让自己的代码部署方便，并在配置的过程中遇到一些&lt;br&gt;一些bug，希望这篇文章可以帮到你&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="GitHub" scheme="https://xiaozisong.github.io/tags/GitHub/"/>
+    
+  </entry>
+  
+  <entry>
     <title>近日</title>
     <link href="https://xiaozisong.github.io/posts/e96dc6e0/"/>
     <id>https://xiaozisong.github.io/posts/e96dc6e0/</id>
-    <published>2022-03-20T07:22:46.769Z</published>
-    <updated>2022-03-20T07:45:18.830Z</updated>
+    <published>2022-04-23T08:51:09.292Z</published>
+    <updated>2022-04-23T08:51:09.292Z</updated>
     
     <content type="html"><![CDATA[<h1 id="近日的一些学习感受"><a href="#近日的一些学习感受" class="headerlink" title="近日的一些学习感受"></a>近日的一些学习感受</h1><span id="more"></span><p>最近吸收了很多知识，收获颇丰，但是自身的不足也慢慢展露</p><ul><li>缺点：<ul><li>知识点多，单独做小的案例没有什么问题，但是知识如果交杂在一起，会不知从何下手，盲目的挑一个点切进去</li><li>学习状态有所下降，长时间的集中精力的去学习，难免会觉得有些许烦躁，做完一些案例，总想看看外面，抽抽烟，自制力还有待提高！</li><li>学习路线较为混乱，从HTML-&gt;CSS-&gt;JS-&gt;Vue2的框架学习，前期路线还蛮清晰的，可是期间在网上学习的时候，看到很多大佬说，前端不止这些知识，其中包括计算机网络、前端工程化的概念、数据结构与算法等。还需要进一步梳理</li></ul></li><li>改善：<ul><li>每次做玩具项目或者是案例时，先通过.md或者是xmind进行思路梳理，大致配好框架，再去细化。</li><li>早睡早起，累的时候就去歇一歇，健健身。毕竟还年轻，哈哈哈</li><li>多去看一些大神的视频，根据他们推荐的学习路线再进行调整<br>每天都是这样的朴实无华，也算是给近期自己的一个小总结吧，继续加油。</li></ul></li></ul>]]></content>
     
@@ -66,8 +85,8 @@
     <title>ES6中的新特性class类与class继承当中的super方法</title>
     <link href="https://xiaozisong.github.io/posts/7c2dfdbb/"/>
     <id>https://xiaozisong.github.io/posts/7c2dfdbb/</id>
-    <published>2022-02-09T15:21:27.000Z</published>
-    <updated>2022-02-10T00:08:01.359Z</updated>
+    <published>2022-02-09T23:21:27.000Z</published>
+    <updated>2022-04-23T08:51:09.292Z</updated>
     
     <content type="html"><![CDATA[<h1 id="ES6中的新增特性-gt-class与class的继承"><a href="#ES6中的新增特性-gt-class与class的继承" class="headerlink" title="ES6中的新增特性 ==&gt; class与class的继承"></a>ES6中的新增特性 ==&gt; class与class的继承</h1><span id="more"></span><ol><li>在ES6中新增的class与class继承，class类就是构造函数的一个抽象，class的继承，底层也还是寄生组合式继承，只不过是封装成了一个使用更为简便的语法糖。</li><li>那么如何创建一个类？<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="symbol">Person</span> &#123;</span><br><span class="line">  <span class="comment">// 恭喜，你成功创建了一个类，类名为Person</span></span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure></li><li>那如何在类中定义方法呢？我们之前在ES5中，为了定义属性，会在构造函数中定义，方法会在构造函数的原型对象上定义，这样会让构造函数的所有实例都能访问和调用原型上的方法，以便节省内存。那么，在ES6的class中，定义类只需要写在constructor构造方法中即可。比如<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(name, age)&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name</span><br><span class="line">    <span class="keyword">this</span>.age = age</span><br><span class="line">    <span class="comment">//本质与ES5中的定义属性方式差距并不是很大</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li>比较重要的就是继承了，这里面的讲究非常多，比如子类在继承父类时，有自己想要定义的属性，那么就要在子类的constructor中优先调用super()，而且，super()方法一定要优先于this，具体为什么呢？因为ES6与ES5的继承机制不同，ES5是实例在前，继承在后，而ES6则恰恰相反，<a href="https://es6.ruanyifeng.com/#docs/class-extends">这就是为什么ES6中为什么必须调用super()方法，因为这一步会生成一个继承父类的this对象，没有这一步就无法继承父类.</a>—–《ES6入门》阮一峰著</li></ol>]]></content>
     
@@ -82,25 +101,6 @@
     <category term="ES6" scheme="https://xiaozisong.github.io/tags/ES6/"/>
     
     <category term="前端" scheme="https://xiaozisong.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>配置GitHub的Actions功能遇到的那些坑</title>
-    <link href="https://xiaozisong.github.io/posts/ead6f52e/"/>
-    <id>https://xiaozisong.github.io/posts/ead6f52e/</id>
-    <published>2022-01-27T03:03:20.197Z</published>
-    <updated>2022-02-09T15:38:05.494Z</updated>
-    
-    <content type="html"><![CDATA[<p>如果你也在配置GitHub的Actions功能，让自己的代码部署方便，并在配置的过程中遇到一些<br>一些bug，希望这篇文章可以帮到你</p><span id="more"></span><h1 id="配置actions时遇到的那些bug"><a href="#配置actions时遇到的那些bug" class="headerlink" title="配置actions时遇到的那些bug"></a>配置actions时遇到的那些bug</h1><p>我使用的是大牛jamesives的.yml配置文件，链接会放在博文的最后</p><ol><li> 463 Error: fatal: No url found for submodule path ‘.deploy_git’ in .gitmodules464 Error: The process “/usr/bin/git’ failed with exit code 128<br>导致这个错误的原因是，你在新建分支时，最后打包提交的产物不在你的new branch上，而是在你的master分支上，导致目录结构错误，提示找不到 No url found ‘xxx’ 在子模块中，所以在你上传打包时，一定仔细检查好你的目录结构</li><li> Process completed with exit code 1. 进程完成，错误代码 1.这个bug暂时未解决，仔细观察了一下错误提示信息，是npm是找不到资源报的错，当时以为是.yml文件迭代了,上网又copy了最新的内容,最后运行还是出错,目前暂未解决···</li><li> 最后，如果你也是要自动化部署你的博客文章与内容，那么<a href="https://www.npmjs.com/package/@jamesives/github-pages-deploy-action">https://www.npmjs.com/package/@jamesives/github-pages-deploy-action</a><br>是你最好的选择。</li></ol>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;如果你也在配置GitHub的Actions功能，让自己的代码部署方便，并在配置的过程中遇到一些&lt;br&gt;一些bug，希望这篇文章可以帮到你&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="GitHub" scheme="https://xiaozisong.github.io/tags/GitHub/"/>
     
   </entry>
   
