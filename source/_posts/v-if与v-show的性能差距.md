@@ -8,6 +8,7 @@ tags:
 abbrlink: 1e5820a1
 date: 2022-04-23 16:09:51
 ---
+### 如果你对v-if与v-show的性能差距上感到疑惑，希望这篇文章可以帮到你
 <!-- more -->
 1. 什么是v-if/v-show
    * v-if与v-show都是vue的内置指令，用来控制dom元素的显示与隐藏，v-if是删除与重建dom元素，而v-show则是控制dom元素的display属性，vue官网中也有介绍，不了解的小伙伴可以先去看看官方文档，这里不做过多赘述了。
