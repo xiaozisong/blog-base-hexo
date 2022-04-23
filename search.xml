@@ -19,7 +19,7 @@
   <entry>
     <title>v-if与v-show的性能差距</title>
     <url>/posts/1e5820a1/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<h3 id="如果你对v-if与v-show的性能差距上感到疑惑，希望这篇文章可以帮到你"><a href="#如果你对v-if与v-show的性能差距上感到疑惑，希望这篇文章可以帮到你" class="headerlink" title="如果你对v-if与v-show的性能差距上感到疑惑，希望这篇文章可以帮到你"></a>如果你对v-if与v-show的性能差距上感到疑惑，希望这篇文章可以帮到你</h3><span id="more"></span>
 <ol>
 <li>什么是v-if/v-show<ul>
 <li>v-if与v-show都是vue的内置指令，用来控制dom元素的显示与隐藏，v-if是删除与重建dom元素，而v-show则是控制dom元素的display属性，vue官网中也有介绍，不了解的小伙伴可以先去看看官方文档，这里不做过多赘述了。</li>
