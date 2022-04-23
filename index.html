@@ -137,12 +137,12 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">5</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">6</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">3</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a>
 
   </li>
         <li class="menu-item menu-item-commonweal">
@@ -280,6 +280,107 @@
             </div>
           <!--/noindex-->
         
+      
+    </div>
+     <!-- 相关文章推荐 -->
+
+    
+    
+    
+    
+      
+
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xiaozisong.github.io/posts/1e5820a1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ziSong">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="coderS">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/1e5820a1/" class="post-title-link" itemprop="url">v-if与v-show的性能差距</a>
+        </h2>
+
+        <div class="post-meta">
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-04-23 16:09:51 / 修改时间：16:42:10" itemprop="dateCreated datePublished" datetime="2022-04-23T16:09:51+08:00">2022-04-23</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/1e5820a1/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/1e5820a1/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <span id="more"></span>
+<ol>
+<li>什么是v-if/v-show<ul>
+<li>v-if与v-show都是vue的内置指令，用来控制dom元素的显示与隐藏，v-if是删除与重建dom元素，而v-show则是控制dom元素的display属性，vue官网中也有介绍，不了解的小伙伴可以先去看看官方文档，这里不做过多赘述了。</li>
+</ul>
+</li>
+<li>为什么说v-if比v-show更浪费性能呢？<ul>
+<li>有可能大家刚开始看到这个问题的时候，会想这不是一个答案显而易见的问题吗？因为v-if是删除与重建dom元素，而v-show是控制元素的display属性。删除与重建dom元素肯定比控制样式更浪费性能呀。确实是这样的，那具体的原因是什么呢？</li>
+</ul>
+</li>
+<li>结论<ul>
+<li>因为每一个dom元素都有大量的无用属性，删除与重建dom元素，都会删除与重建dom元素身上的无用属性，造成性能上的浪费。</li>
+<li>Vue中因为虚拟DOM与diff算法的存在，可以高效的更新DOM，而虚拟DOM就是将真实DOM抽象成一个js对象，将真实DOM身上的无用属性去掉。</li>
+<li>v-if的频繁切换，就会造成Vue反复进行创建删除虚拟DOM，如果是子元素还好，要是根节点，Vue会将整个树删除，造成性能上的浪费。</li>
+<li>都不用说渲染层面上的重绘重排，在这里v-if已经输了。</li>
+</ul>
+</li>
+<li>如何选择v-if与v-show<ul>
+<li>v-if是惰性的，如果条件为false，那么一上来Vue是不会帮你创建DOM元素的，而v-show不是</li>
+<li>如果你是频繁需要切换元素的显示与隐藏，推荐v-show。</li>
+</ul>
+</li>
+</ol>
+
       
     </div>
      <!-- 相关文章推荐 -->
@@ -548,14 +649,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

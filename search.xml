@@ -17,6 +17,40 @@
       </tags>
   </entry>
   <entry>
+    <title>v-if与v-show的性能差距</title>
+    <url>/posts/1e5820a1/</url>
+    <content><![CDATA[<span id="more"></span>
+<ol>
+<li>什么是v-if/v-show<ul>
+<li>v-if与v-show都是vue的内置指令，用来控制dom元素的显示与隐藏，v-if是删除与重建dom元素，而v-show则是控制dom元素的display属性，vue官网中也有介绍，不了解的小伙伴可以先去看看官方文档，这里不做过多赘述了。</li>
+</ul>
+</li>
+<li>为什么说v-if比v-show更浪费性能呢？<ul>
+<li>有可能大家刚开始看到这个问题的时候，会想这不是一个答案显而易见的问题吗？因为v-if是删除与重建dom元素，而v-show是控制元素的display属性。删除与重建dom元素肯定比控制样式更浪费性能呀。确实是这样的，那具体的原因是什么呢？</li>
+</ul>
+</li>
+<li>结论<ul>
+<li>因为每一个dom元素都有大量的无用属性，删除与重建dom元素，都会删除与重建dom元素身上的无用属性，造成性能上的浪费。</li>
+<li>Vue中因为虚拟DOM与diff算法的存在，可以高效的更新DOM，而虚拟DOM就是将真实DOM抽象成一个js对象，将真实DOM身上的无用属性去掉。</li>
+<li>v-if的频繁切换，就会造成Vue反复进行创建删除虚拟DOM，如果是子元素还好，要是根节点，Vue会将整个树删除，造成性能上的浪费。</li>
+<li>都不用说渲染层面上的重绘重排，在这里v-if已经输了。</li>
+</ul>
+</li>
+<li>如何选择v-if与v-show<ul>
+<li>v-if是惰性的，如果条件为false，那么一上来Vue是不会帮你创建DOM元素的，而v-show不是</li>
+<li>如果你是频繁需要切换元素的显示与隐藏，推荐v-show。</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>ES6</tag>
+        <tag>前端</tag>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>近日</title>
     <url>/posts/e96dc6e0/</url>
     <content><![CDATA[<h1 id="近日的一些学习感受"><a href="#近日的一些学习感受" class="headerlink" title="近日的一些学习感受"></a>近日的一些学习感受</h1><span id="more"></span>
@@ -37,8 +71,8 @@
 </ul>
 ]]></content>
       <tags>
-        <tag>学习</tag>
         <tag>前端</tag>
+        <tag>学习</tag>
       </tags>
   </entry>
   <entry>
@@ -53,9 +87,9 @@
 </ol>
 ]]></content>
       <tags>
-        <tag>前端</tag>
         <tag>JavaScript</tag>
         <tag>ES6</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
 </search>
